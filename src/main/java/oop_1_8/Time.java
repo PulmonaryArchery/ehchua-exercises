@@ -47,13 +47,33 @@ public class Time {
     }
 
     public Time nextSecond() {
-        this.second += 1;
-        return new Time(getHour(), getMinute(), getSecond());
+
+        second++;
+        if (second == 60) {
+            minute++;
+            second = 0;
+        }
+        if (minute == 60) {
+            hour++;
+            minute = 0;
+        }
+        if (hour == 24) {
+            hour = 0;
+        }
+        return this;
+
     }
 
     public Time previousSecond() {
-        this.second -= 1;
-        return new Time(getHour(), getMinute(), getSecond());
+
+        if (second == 0 && minute == 0 && hour == 0) {
+            second = 60;
+            minute = 59;
+            hour = 23;
+        }
+        second--;
+        return this;
+
     }
 
 }

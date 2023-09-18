@@ -1,7 +1,5 @@
 package oop_1_8;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class TestMain {
 
     public static void main(String[] args) {
@@ -22,6 +20,9 @@ public class TestMain {
 
         System.out.println(t1.nextSecond());
         System.out.println(t1.nextSecond().nextSecond());
+
+        System.out.println(t1.previousSecond());
+        System.out.println(t1.previousSecond().previousSecond());
 
     }
 
