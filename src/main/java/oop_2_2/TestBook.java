@@ -10,7 +10,7 @@ public class TestBook {
 
         Book javaDummy = new Book("Java for Dummy", authors, 19.99, 99);
         System.out.println(javaDummy);
-//        System.out.println(javaDummy.getAuthorNames());
+        System.out.println(javaDummy.getAuthorNames());
 
     }
 

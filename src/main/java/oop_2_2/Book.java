@@ -50,8 +50,12 @@ public class Book {
         return "Book[name=" + name + ",authors={" + Arrays.toString(authors) + "},price=" + price + ",qty=" + qty + "]";
     }
 
-//    public String getAuthorNames() {
-//        return
-//    }
+    public String getAuthorNames() {
+        StringBuilder result = new StringBuilder();
+        for (Author author : authors) {
+            result.append(author.getName()).append(",");
+        }
+        return result.toString();
+    }
 
 }
