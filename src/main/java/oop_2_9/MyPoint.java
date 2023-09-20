@@ -1,4 +1,4 @@
-package oop_2_7;
+package oop_2_9;
 
 public class MyPoint {
 
