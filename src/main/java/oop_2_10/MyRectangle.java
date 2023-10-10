@@ -31,6 +31,18 @@ public class MyRectangle {
         this.bottomRight = bottomRight;
     }
 
+    public double getPerimeter() {
+
+        MyPoint bottomLeft = new MyPoint(topLeft.getX(), bottomRight.getY());
+        MyPoint topRight = new MyPoint(topLeft.getY(), bottomRight.getX());
+
+        double width = topLeft.distance(bottomLeft);
+        double length = topLeft.distance(topRight);
+
+        return 2 * (length + width);
+
+    }
+
     public String toString() {
         return "MyRectangle[topLeft=(" + topLeft.getX() + "," + topLeft.getY() + "),bottomRight=(" + bottomRight.getX() + "," + bottomRight.getY() + ")]";
     }
