@@ -43,6 +43,18 @@ public class MyRectangle {
 
     }
 
+    public double getArea() {
+
+        MyPoint bottomLeft = new MyPoint(topLeft.getX(), bottomRight.getY());
+        MyPoint topRight = new MyPoint(topLeft.getY(), bottomRight.getX());
+
+        double width = topLeft.distance(bottomLeft);
+        double length = topLeft.distance(topRight);
+
+        return length * width;
+
+    }
+
     public String toString() {
         return "MyRectangle[topLeft=(" + topLeft.getX() + "," + topLeft.getY() + "),bottomRight=(" + bottomRight.getX() + "," + bottomRight.getY() + ")]";
     }

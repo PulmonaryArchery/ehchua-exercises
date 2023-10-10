@@ -15,6 +15,7 @@ public class TestMain {
         System.out.println("r1 bottomRight is: " + r1.getBottomRight());
 
         System.out.println("r1 perimeter is: " + r1.getPerimeter());
+        System.out.println("r1 area is: " + r1.getArea());
 
     }
 
