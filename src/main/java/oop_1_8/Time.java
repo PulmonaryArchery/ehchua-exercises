@@ -48,17 +48,12 @@ public class Time {
 
     public Time nextSecond() {
 
-        second++;
-        if (second == 60) {
-            minute++;
-            second = 0;
-        }
-        if (minute == 60) {
-            hour++;
-            minute = 0;
-        }
-        if (hour == 24) {
+        if (hour == 23 && minute == 59 && second == 59) {
             hour = 0;
+            minute = 0;
+            second = 0;
+        } else {
+            second++;
         }
         return this;
 
@@ -67,11 +62,12 @@ public class Time {
     public Time previousSecond() {
 
         if (second == 0 && minute == 0 && hour == 0) {
-            second = 60;
+            second = 59;
             minute = 59;
             hour = 23;
+        } else {
+            second--;
         }
-        second--;
         return this;
 
     }
